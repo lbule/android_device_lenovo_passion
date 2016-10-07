@@ -1,0 +1,53 @@
+/persist/.bt_nv.bin						u:object_r:bluetooth_data_file:s0
+
+/system/etc/init\.qcom\.bt\.sh					u:object_r:bluetooth_loader_exec:s0
+
+/system/bin/power_engine					u:object_r:power_engine_exec:s0
+
+/dev/smd3							u:object_r:hci_attach_dev:s0
+
+/data/cam_socket.*						u:object_r:camera_socket:s0
+
+# tfa9890
+/dev/i2c-4							u:object_r:audio_device:s0
+
+# NFC
+/dev/bcm2079x							u:object_r:nfc_device:s0
+
+/dev/block/bootdevice/by-name/tunning				u:object_r:modem_efs_partition_device:s0
+
+## Audio
+/dev/i2c_smartpa(/.*)?     		 	                u:object_r:audio_device:s0
+
+# fast_charger_sw
+/system/bin/fast_charger_sw 					u:object_r:fast_charger_sw_exec:s0
+
+#fingerprint
+/system/bin/vfmService u:object_r:vfmservice_exec:s0
+/dev/vfsspi u:object_r:fingerprint_device:s0
+/dev/validity(/.*)? u:object_r:fingerprint_device_file:s0
+/data/validity(/.*)? u:object_r:fingerprint_data_file:s0
+# end
+
+#leds
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-006b/leds/test-led/brightness u:object_r:sysfs_leds:s0
+/sys/class/leds/button-backlight/brightness u:object_r:sysfs_leds:s0
+/sys/class/leds/test-led/brightness u:object_r:sysfs_leds:s0
+/sys/class/leds/rgbled/brightness u:object_r:sysfs_leds:s0
+/sys/class/leds/rgbled/trigger u:object_r:sysfs_leds:s0
+/sys/class/leds/rgbled/delay_on u:object_r:sysfs_leds:s0
+/sys/class/leds/rgbled/delay_off u:object_r:sysfs_leds:s0
+
+#added support alipay native service
+/system/bin/qseecom_opt_handler	u:object_r:qseeopt_exec:s0
+/system/bin/init-lenovo-sfs-purge.sh u:object_r:purgesfs_exec:s0
+#end
+
+#add for sensor calibration
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-000e/fast_calibration_x u:object_r:sysfs_gs_cali_file:s0
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-000e/fast_calibration_y u:object_r:sysfs_gs_cali_file:s0
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-000e/fast_calibration_z u:object_r:sysfs_gs_cali_file:s0
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-0023/cali_param_1 u:object_r:sysfs_ps_cali_file:s0
+/sys/devices/soc.0/78b6000.i2c/i2c-0/0-0023/cali_param_2 u:object_r:sysfs_ps_cali_file:s0
+#end
+

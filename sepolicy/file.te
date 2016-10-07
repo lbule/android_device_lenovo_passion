@@ -1,0 +1,7 @@
+type macaddr_data_file, file_type;
+type sysfs_gs_cali_file, sysfs_type, file_type;
+type sysfs_ps_cali_file, sysfs_type, file_type;
+type fingerprint_data_file, file_type;
+type fingerprint_device, dev_type;
+type fingerprint_device_file, file_type;
+

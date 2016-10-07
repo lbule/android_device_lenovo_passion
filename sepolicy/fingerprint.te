@@ -1,0 +1,20 @@
+#fingerprintserver
+type vfmservice_exec, exec_type, file_type;
+type vfmservice, domain;
+
+permissive vfmservice;
+init_daemon_domain(vfmservice)
+
+
+type qseeopt_exec, exec_type, file_type;
+type qseeopt, domain;
+
+permissive qseeopt;
+init_daemon_domain(qseeopt)
+
+type purgesfs_exec, exec_type, file_type;
+type purgesfs, domain;
+
+permissive purgesfs;
+init_daemon_domain(purgesfs)
+
